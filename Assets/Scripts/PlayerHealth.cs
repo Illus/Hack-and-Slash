@@ -15,11 +15,17 @@ public class PlayerHealth : MonoBehaviour
 
 	void Update () 
 	{
-	
+		AdjustCurrentHealth(0);
 	}
 
 	void OnGUI ()
 	{
-		GUI.Box(new Rect(10, 10, Screen.width / 2 / (maxHealth / curHealth), 20), curHealth + "/" + maxHealth);
+		GUI.Box(new Rect(10, 10, healthBarLength, 20), curHealth + "/" + maxHealth);
+	}
+
+	public void AdjustCurrentHealth ( int adj )
+	{
+		curHealth += adj;
+		healthBarLength = (Screen.width / 2) * (curHealth / (float)maxHealth);
 	}
 }
