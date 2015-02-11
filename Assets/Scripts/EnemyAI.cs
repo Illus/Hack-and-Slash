@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour
 	
 	void Start () 
 	{
-
+		GameObject go = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	void Update () 
