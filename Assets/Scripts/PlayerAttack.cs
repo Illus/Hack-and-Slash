@@ -12,7 +12,15 @@ public class PlayerAttack : MonoBehaviour
 
 	void Update () 
 	{
-	
+		if (Input.GetKeyUp(KeyCode.F))
+		{
+			Attack();
+		}
+	}
+
+	private void Attack()
+	{
+
 	}
 
 }
