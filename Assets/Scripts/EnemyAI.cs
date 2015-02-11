@@ -1,15 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyAI : MonoBehaviour {
+public class EnemyAI : MonoBehaviour 
+{
+	public Transform target;
+	public int moveSpeed;
+	public int rotationSpeed;
 
-	// Use this for initialization
-	void Start () {
-	
+	private Transform myTransform;
+
+	void Awake ()
+	{
+		myTransform = transform;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Start () 
+	{
+
+	}
+
+	void Update () 
+	{
 	
 	}
+
 }
