@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
 
 	void Update () 
 	{
-	
+		Debug.DrawLine(target.position, myTransform.position, Color.yellow);
 	}
 
 }
