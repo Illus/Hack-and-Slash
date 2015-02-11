@@ -20,7 +20,8 @@ public class PlayerAttack : MonoBehaviour
 
 	private void Attack()
 	{
-
+		EnemyHealth eh = (EnemyHealth)target.GetComponent("EnemyHealth");
+		eh.AdjustCurrentHealth(-10);
 	}
 
 }
