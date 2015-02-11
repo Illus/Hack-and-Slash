@@ -24,6 +24,9 @@ public class EnemyAI : MonoBehaviour
 	void Update () 
 	{
 		Debug.DrawLine(target.position, myTransform.position, Color.yellow);
+
+		//Look at target
+		myTransform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed * Time.deltaTime);
 	}
 
 }
