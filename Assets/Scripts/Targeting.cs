@@ -46,7 +46,6 @@ public class Targeting : MonoBehaviour
 		{
 			SortTargetsByDistance();
 			selectedTarget = targets[0];
-			SelectTarget();
 		}
 		else
 		{
@@ -61,8 +60,8 @@ public class Targeting : MonoBehaviour
 				index = 0;
 			}
 			selectedTarget = targets[index];
-			SelectTarget();
 		}
+		SelectTarget();
 	}
 
 	private void SelectTarget ()
