@@ -47,7 +47,6 @@ public class Targeting : MonoBehaviour
 			SortTargetsByDistance();
 			selectedTarget = targets[0];
 		}
-		selectedTarget = targets[0];
 	}
 
 	void Update () 
