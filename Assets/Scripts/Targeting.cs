@@ -6,11 +6,14 @@ public class Targeting : MonoBehaviour
 {
 	public List<Transform> targets;
 	public Transform selectedTarget;
+
+	private Transform myTransform;
 	
 	void Start () 
 	{
 		targets = new List<Transform>();
 		selectedTarget = null;
+		myTransform = transform;
 
 		AddAllEnemies();
 	}
@@ -30,8 +33,20 @@ public class Targeting : MonoBehaviour
 		targets.Add (enemy);
 	}
 
+	private void SortTargetsByDistance ()
+	{
+		targets.Sort(delegate(Transform t1, Transform t2) { return
+			Vector3.Distance(t1.position, myTransform.position).CompareTo(Vector3.Distance(t2.position, myTransform.position));
+			});
+	}
+
 	private void TargetEnemy ()
 	{
+		if(selectedTarget == null)
+		{
+			SortTargetsByDistance();
+			selectedTarget = targets[0];
+		}
 		selectedTarget = targets[0];
 	}
 
