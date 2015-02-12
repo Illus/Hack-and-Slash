@@ -5,10 +5,12 @@ using System.Collections.Generic;
 public class Targeting : MonoBehaviour 
 {
 	public List<Transform> targets;
+	public Transform selectedTarget;
 	
 	void Start () 
 	{
 		targets = new List<Transform>();
+		selectedTarget = null;
 
 		AddAllEnemies();
 	}
@@ -28,9 +30,17 @@ public class Targeting : MonoBehaviour
 		targets.Add (enemy);
 	}
 
+	private void TargetEnemy ()
+	{
+		selectedTarget = targets[0];
+	}
+
 	void Update () 
 	{
-	
+		if(Input.GetKeyDown(KeyCode.Tab))
+		{
+			TargetEnemy();
+		}
 	}
 
 }
