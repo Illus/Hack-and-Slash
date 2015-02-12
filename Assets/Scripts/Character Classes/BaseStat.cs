@@ -12,4 +12,26 @@
 		_expToLevel = 100;
 		_levelModifier = 1.1f;
 	}
+
+	//Basic Setters and Getters
+	public int BaseValue
+	{
+		get{ return _baseValue; }
+		set{ _baseValue = value; }
+	}
+	private int BuffValue
+	{
+		get{ return _buffValue; }
+		set{ _buffValue = value; }
+	}
+	private int ExpToLevel
+	{
+		get{ return _expToLevel; }
+		set{ _expToLevel = value; }
+	}
+	private float LeveltoModifier
+	{
+		get{ return _levelModifier; }
+		set{ _levelModifier = value; }
+	}
 }
