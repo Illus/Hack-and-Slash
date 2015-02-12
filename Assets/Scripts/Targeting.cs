@@ -46,6 +46,7 @@ public class Targeting : MonoBehaviour
 		{
 			SortTargetsByDistance();
 			selectedTarget = targets[0];
+			SelectTarget();
 		}
 		else
 		{
@@ -60,7 +61,13 @@ public class Targeting : MonoBehaviour
 				index = 0;
 			}
 			selectedTarget = targets[index];
+			SelectTarget();
 		}
+	}
+
+	private void SelectTarget ()
+	{
+		selectedTarget.renderer.material.color = Color.red;
 	}
 
 	void Update () 
